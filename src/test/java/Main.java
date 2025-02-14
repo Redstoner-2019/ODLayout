@@ -13,13 +13,18 @@ public class Main extends JFrame {
 
         ODLayout layout = new ODLayout();
 
-        layout.addColumn(new Column(.2, LengthType.PERCENT));
-        layout.addColumn(new Column(Lengths.VARIABLE));
-        layout.addColumn(new Column(.2, LengthType.PERCENT));
+        layout.debug = false;
 
-        layout.addRow(new Row(200, LengthType.PIXEL));
+        layout.setPad(10);
+
+        //layout.addColumn(new Column(20, LengthType.PIXEL));
+        layout.addColumn(new Column(Lengths.VARIABLE));
+        layout.addColumn(new Column(Lengths.VARIABLE));
+        //layout.addColumn(new Column(20, LengthType.PIXEL));
+
+        layout.addRow(new Row(20, LengthType.PIXEL));
         layout.addRow(new Row(Lengths.VARIABLE));
-        layout.addRow(new Row(200, LengthType.PIXEL));
+        layout.addRow(new Row(20, LengthType.PIXEL));
 
         JButton topLeft = new JButton("topLeft");
         JButton topMiddle = new JButton("topMiddle");
